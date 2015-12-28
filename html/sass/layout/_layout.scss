@@ -481,7 +481,9 @@
 				margin-bottom: 10px;
 				&:nth-of-type(2) {
 					text-align: center;
-					margin-bottom: 10px;
+				}
+				&:nth-of-type(4) {
+					margin-bottom: 0;
 				}
 				> input, > button, > select {
 					height: 40px;
@@ -772,6 +774,7 @@
 				}
 				&:nth-of-type(3) {
 					@include span(full);
+					margin-bottom: 0;
 				}
 			}
 		}
@@ -909,7 +912,6 @@
 .day-setting {
 	margin-bottom: 10px;
 	@include layout(3 10px/147px);
-	overflow: hidden;
 	> button {
 		&:nth-of-type(1) {
 			@include span(1);
@@ -1002,9 +1004,9 @@
 	}
 }
 
-// =======================================
+// ======================================================
 // announce-store-announcement.html (Schedule - Store Announcement)
-// =======================================
+// ======================================================
 .announce-title-bg {
 	@extend .title-btn-bg;
 	.title-btn {
@@ -1020,7 +1022,180 @@
 		}
 	}
 }
+.store-announcement-list {
+	@extend .my-schedule-list;
+	.table-set {
+		colgroup {
+			col {
+				&:nth-of-type(1) {
+					width: 65px;
+				}
+				&:nth-of-type(2) {
+					width: 150px;
+				}
+			}
+		}
+		thead {
+			tr {
+				th:nth-of-type(1) {
+					font-size: 18px;
+				}
+			}
+		}
+	}
+}
+.store-announcement-list {
+	.table-set {
+		tbody {
+			tr {
+				td {
+					padding-left: 130px;
+					&:before {
+						width: 110px;
+					}
+				}
+				td:nth-of-type(1):before {
+					content: "Bookmark";
+				}
+				td:nth-of-type(1) {
+					color: $font-color-purple;
+					i.fa {
+						vertical-align: bottom;
+						font-size: 18px;
+					}
+				}
+				td:nth-of-type(2):before {
+					content: "UpDate";
+				}
+				td:nth-of-type(3):before {
+					content: "Period";
+				}
+				td:nth-of-type(3) {
+					color: inherit;
+				}
+				td:nth-of-type(4):before {
+					content: "Store";
+				}
+				td:nth-of-type(5):before {
+					content: "Subject";
+				}
+				td:nth-of-type(5) {
+					color: $font-color-purple;
+				}
+			}
+		}
+	}
+}
+.store-announcement-list {
+	.table-set {
+		@include susy-breakpoint($tablet) {
+			tbody {
+				tr {
+					td {
+						padding-left: 0;
+						&:nth-of-type(1) {
+							i.fa {
+								vertical-align: middle;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.store-announcement-list {
+	.line-group-set {
+		.line-group-01 {
+			> li {
+				&:nth-of-type(1) {
+					width: 30%;
+					margin-right: 0;
+					label {
+						i.fa {
+							font-size: 18px;
+							color: $font-color-purple;
+							vertical-align: middle;
+						}
+					}
+				}
+				&:nth-of-type(2) {
+					width: 70%;
+					@include last;
+				}
+				&:nth-of-type(3) {
+					@include span(full);
+					margin-bottom: 10px;
+					input {
+						width: 100%;
+					}
+				}
+				&:nth-of-type(4) {
+					@include span(full);
+					button {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+.store-announcement-list {
+	.line-group-set {
+		@include susy-breakpoint($tablet, 8) {
+			.line-group-01 {
+				@include layout(8 8px/68px);
+				> li {
+					&:nth-of-type(1) {
+						@include span(1);
+					}
+					&:nth-of-type(2) {
+						@include span(2);
+					}
+					&:nth-of-type(3) {
+						@include span(3);
+						margin-bottom: 0;
+					}
+					&:nth-of-type(4) {
+						@include span(2);
+						@include last;
+					}
+				}
+			}
+		}
+	}
+}
+.store-announcement-list {
+	.line-group-set {
+		@include susy-breakpoint($desktop) {
+			.line-group-01 {
+				@include layout(12 8px/76px);
+				> li {
+					&:nth-of-type(1) {
+						@include span(1);
+					}
+					&:nth-of-type(2) {
+						@include span(3 at 4);
+					}
+					&:nth-of-type(3) {
+						@include span(3 at 7);
+					}
+					&:nth-of-type(4) {
+						@include span(2);
+						@include last;
+					}
+				}
+			}
+		}
+	}
+}
 
+// ======================================================
+// announce-store-announcement.html (Schedule - Store Announcement)
+// ======================================================
+.request-time-off-list {
+	@extend .my-schedule-list;
+}
 
 /*
 .recommend {

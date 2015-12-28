@@ -19,14 +19,34 @@
 		</div>
 	</div>
 	<!-- / 페이지 전환 버튼 End -->
-	<!-- Schedule History -->
-	<div class="history-list wrap">
-		<!-- 날자 단위별 보기 -->
-		<div class="day-setting">
-			<button class="selected">15day</button><button>1month</button><button>6month</button>
-			<span class="help"><i class="fa fa-exclamation-circle"></i>최근 6개월이내 예약내역만 확인하실 수 있습니다.</span>
+	<!-- Store Announcement -->
+	<div class="store-announcement-list wrap">
+		<!-- 스케줄 추가 설정 -->
+		<div class="line-group-set">
+			<ul class="line-group-01">
+				<li>
+					<input class="kalypto" type="checkbox" id="bookmark">
+					<label class="kalypto-label" for="bookmark"><i class="fa fa-star"></i></label>
+				</li>
+				<li class="select-style">
+					<select>
+						<option value="">All Store</option>
+						<option value="">Store 1</option>
+						<option value="">Store 2</option>
+						<option value="">Store 3</option>
+						<option value="">Store 4</option>
+					</select>
+				</li>
+				<li>
+					<input type="search" aria-label="Detail Search">
+				</li>
+				<li>
+					<button class="appointment-schedule-search"><i class="fa fa-search"></i>Search</button>
+				</li>
+			</ul>
 		</div>
-		<!-- / 날자 단위별 보기 End -->
+		<!-- / 스케줄 추가 설정 End -->
+		<p class="total">Total : 25 </p>
 		<!-- Table list Group -->
 		<table class="table-set">
 			<caption>History</caption>
@@ -36,114 +56,100 @@
 				<col>
 				<col>
 				<col>
-				<col>
 			</colgroup>
 			<thead>
 				<tr>
-					<th>Date</th>
-					<th>Time</th>
-					<th>Salon Name</th>
-					<th>Service</th>
-					<th>Total</th>
-					<th>Status</th>
+					<th><i class="fa fa-star"></i></th>
+					<th>UpDate</th>
+					<th>Period</th>
+					<th>Store</th>
+					<th>Subject</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
+					<td><i class="fa fa-star"></i></td>
 					<td>07/22/ 2015</td>
-					<td>21:30 ~ 22:00</td>
+					<td>07/22/2015 ~ 08/22/2015</td>
 					<td>Suite Styles Salon</td>
-					<td>Hair Color and Other (Karen Dals)</td>
-					<td>$90.00</td>
-					<td>Confirm</td>
+					<td><a href="" class="btn-add trigger-pop-subject" data-target=".popup-layer.pop-subject">Barbecue Party</a></td>
 				</tr>
 				<tr>
+					<td><i class="fa fa-star-o"></i></td>
 					<td>07/22/ 2015</td>
-					<td>21:30 ~ 22:00</td>
+					<td>07/22/2015 ~ 08/22/2015</td>
 					<td>Suite Styles Salon</td>
-					<td>Hair Color and Other (Karen Dals)</td>
-					<td>$90.00</td>
-					<td>Confirm</td>
+					<td>Barbecue Party</td>
 				</tr>
 				<tr>
+					<td><i class="fa fa-star"></i></td>
 					<td>07/22/ 2015</td>
-					<td>21:30 ~ 22:00</td>
+					<td>07/22/2015 ~ 08/22/2015</td>
 					<td>Suite Styles Salon</td>
-					<td>Hair Color and Other (Karen Dals)</td>
-					<td>$90.00</td>
-					<td>Confirm</td>
+					<td>Barbecue Party</td>
 				</tr>
 				<tr>
+					<td><i class="fa fa-star-o"></i></td>
 					<td>07/22/ 2015</td>
-					<td>21:30 ~ 22:00</td>
+					<td>07/22/2015 ~ 08/22/2015</td>
 					<td>Suite Styles Salon</td>
-					<td>Hair Color and Other (Karen Dals)</td>
-					<td>$90.00</td>
-					<td>Confirm</td>
+					<td>Barbecue Party</td>
 				</tr>
 				<tr>
-					<td class="cancel">07/22/ 2015</td> <!-- 예약 취소된 상태 class="cancel" 추가 -->
-					<td class="cancel">21:30 ~ 22:00</td>
-					<td class="cancel">Suite Styles Salon</td>
-					<td class="cancel">Hair Color and Other (Karen Dals)</td>
-					<td class="cancel">$90.00</td>
-					<td class="cancel">Cancel</td>
+					<td><i class="fa fa-star"></i></td>
+					<td>07/22/ 2015</td>
+					<td>07/22/2015 ~ 08/22/2015</td>
+					<td>Suite Styles Salon</td>
+					<td>Barbecue Party</td>
 				</tr>
 				<tr>
+					<td><i class="fa fa-star-o"></i></td>
 					<td>07/22/ 2015</td>
-					<td>21:30 ~ 22:00</td>
+					<td>07/22/2015 ~ 08/22/2015</td>
 					<td>Suite Styles Salon</td>
-					<td>Hair Color and Other (Karen Dals)</td>
-					<td>$90.00</td>
-					<td>Confirm</td>
+					<td>Barbecue Party</td>
 				</tr>
 				<tr>
+					<td><i class="fa fa-star-o"></i></td>
 					<td>07/22/ 2015</td>
-					<td>21:30 ~ 22:00</td>
+					<td>07/22/2015 ~ 08/22/2015</td>
 					<td>Suite Styles Salon</td>
-					<td>Hair Color and Other (Karen Dals)</td>
-					<td>$90.00</td>
-					<td>Confirm</td>
+					<td>Barbecue Party</td>
 				</tr>
 				<tr>
+					<td><i class="fa fa-star"></i></td>
 					<td>07/22/ 2015</td>
-					<td>21:30 ~ 22:00</td>
+					<td>07/22/2015 ~ 08/22/2015</td>
 					<td>Suite Styles Salon</td>
-					<td>Hair Color and Other (Karen Dals)</td>
-					<td>$90.00</td>
-					<td>Confirm</td>
+					<td>Barbecue Party</td>
 				</tr>
 				<tr>
+					<td><i class="fa fa-star-o"></i></td>
 					<td>07/22/ 2015</td>
-					<td>21:30 ~ 22:00</td>
+					<td>07/22/2015 ~ 08/22/2015</td>
 					<td>Suite Styles Salon</td>
-					<td>Hair Color and Other (Karen Dals)</td>
-					<td>$90.00</td>
-					<td>Confirm</td>
+					<td>Barbecue Party</td>
 				</tr>
 				<tr>
+					<td><i class="fa fa-star"></i></td>
 					<td>07/22/ 2015</td>
-					<td>21:30 ~ 22:00</td>
+					<td>07/22/2015 ~ 08/22/2015</td>
 					<td>Suite Styles Salon</td>
-					<td>Hair Color and Other (Karen Dals)</td>
-					<td>$90.00</td>
-					<td>Confirm</td>
+					<td>Barbecue Party</td>
 				</tr>
 				<tr>
+					<td><i class="fa fa-star-o"></i></td>
 					<td>07/22/ 2015</td>
-					<td>21:30 ~ 22:00</td>
+					<td>07/22/2015 ~ 08/22/2015</td>
 					<td>Suite Styles Salon</td>
-					<td>Hair Color and Other (Karen Dals)</td>
-					<td>$90.00</td>
-					<td>Confirm</td>
+					<td>Barbecue Party</td>
 				</tr>
 				<tr>
+					<td><i class="fa fa-star-o"></i></td>
 					<td>07/22/ 2015</td>
-					<td>21:30 ~ 22:00</td>
+					<td>07/22/2015 ~ 08/22/2015</td>
 					<td>Suite Styles Salon</td>
-					<td>Hair Color and Other (Karen Dals)</td>
-					<td>$90.00</td>
-					<td>Confirm</td>
+					<td>Barbecue Party</td>
 				</tr>
 			</tbody>
 		</table>
@@ -154,7 +160,7 @@
 		</div>
 		<!-- / Paging End -->
 	</div>
-	<!-- / Schedule End -->
+	<!-- / Store Announcement End -->
 </main>
 <!-- / Contents Area End-->
 
@@ -163,7 +169,7 @@
 <!-- / Footer Area End -->
 
 <!-- Add Schedule Popup -->
-<!--#include file="/_popup/_pop-add-schedule.html"-->
+<!--#include file="/_popup/_pop-subject.html"-->
 <!-- / Add Schedule Popup End -->
 
 <!-- windows XP 또는 ie9 이하 브라우저 업그레이드 권장 안내 -->

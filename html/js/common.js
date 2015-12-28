@@ -78,6 +78,7 @@
 	// Popup Script
 	// 팝업이 링크 될 요소
 	$('.trigger-pop-add-schedule').popupLayer();
+	$('.trigger-pop-subject').popupLayer();
 	$('.trigger-pop-reviews').popupLayer();
 	// 위치 이동 드래그 될 팝업창
 	$('.popup-layer .container').draggable({
