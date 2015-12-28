@@ -664,6 +664,52 @@ input[type=date]::-webkit-calendar-picker-indicator:before {
 		}
 	}
 }
+// 서브 상단 컬럼 갯 수
+.title-btn-bg {
+	position: relative;
+	@include span(full);
+	background: $bg-default-purple;
+	border-top: 1px solid #a547c0;
+	clear: both;
+	.title-btn {
+		padding: 0;
+		line-height: $base-line-height * 2;
+		> h3 {
+			@include wh-center;
+			font-size: 100%;
+			color: #eade25;
+		}
+		> a {
+			font-size: 12px;
+			color: #fff;
+			text-align: center;
+			height: $base-line-height * 2;
+			padding: 0 10px;
+			border-right: 1px solid #b568cb;
+			&:focus, &.selected {
+				color: $font-color-yellow;
+			}
+			&:last-child {
+				border-right: 0;
+			}
+		}
+		@include susy-breakpoint(600px) {
+			> a {
+				font-size: 14px;
+			}
+		}
+		@include susy-breakpoint(700px) {
+			padding-left: 20px;
+			padding-right: 20px;
+			> h3 {
+				font-size: inherit;
+			}
+			> a {
+				font-size: 16px;
+			}
+		}
+	}
+}
 // 한줄 라인 오른쪽 배치 (버튼, 체크박스, 라이오버튼 등)
 .line-left-box-area {
 	float: left;

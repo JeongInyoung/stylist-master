@@ -425,42 +425,21 @@
 // =========================================================
 // schedule-appointment-schedule.html (Schedule - Aappointment Schedule)
 // =========================================================
-.title-btn-bg {
-	position: relative;
-	@include span(full);
-	background: $bg-default-purple;
-	border-top: 1px solid #a547c0;
-	clear: both;
+.schedule-title-bg {
+	@extend .title-btn-bg;
 	.title-btn {
-		padding: 0;
-		line-height: $base-line-height * 2;
-		> h3 {
-			@include wh-center;
-			font-size: 100%;
-			color: #eade25;
-		}
 		> a {
 			@include layout(3 0px/333px);
-			font-size: 12px;
-			color: #fff;
-			text-align: center;
-			height: $base-line-height * 2;
-			padding: 0 10px;
-			&:focus, &.selected {
-				color: $font-color-yellow;
-			}
 			&:nth-of-type(1) {
 				@include span(1);
 				line-height: 1.5;
 				padding-top: 3px;
-				border-right: 1px solid #b568cb;
 				span {
 					display: block;
 				}
 			}
 			&:nth-of-type(2) {
 				@include span(1);
-				border-right: 1px solid #b568cb;
 			}
 			&:nth-of-type(3) {
 				@include span(1);
@@ -469,7 +448,7 @@
 		}
 	}
 }
-.title-btn-bg {
+.schedule-title-bg {
 	.title-btn {
 		@include susy-breakpoint(485px) {
 			> a:nth-of-type(1) {
@@ -480,25 +459,8 @@
 				}
 			}
 		}
-		@include susy-breakpoint(600px) {
-			> a {
-				font-size: 14px;
-			}
-		}
-		@include susy-breakpoint(700px) {
-		padding-left: 20px;
-		padding-right: 20px;
-			> h3 {
-				font-size: inherit;
-			}
-			> a {
-				font-size: 16px;
-			}
-		}
 	}
 }
-
-
 .appointment-schedule-list {
 	padding-top: $base-line-height * 2;
 	padding-bottom: $base-line-height * 2;
@@ -1035,6 +997,25 @@
 						text-decoration: inherit;
 					}
 				}
+			}
+		}
+	}
+}
+
+// =======================================
+// announce-store-announcement.html (Schedule - Store Announcement)
+// =======================================
+.announce-title-bg {
+	@extend .title-btn-bg;
+	.title-btn {
+		> a {
+			@include layout(2 0%/50%);
+			&:first-child {
+				@include span(1);
+			}
+			&:last-child {
+				@include span(1);
+				@include last;
 			}
 		}
 	}
