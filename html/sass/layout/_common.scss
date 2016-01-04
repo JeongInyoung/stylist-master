@@ -323,11 +323,10 @@ input[type=date]::-webkit-calendar-picker-indicator:before {
 // =======================================
 
 // IE 10, 11의 네이티브 화살표 숨기기
-.lt-ie10 {
-	select::-ms-expand {
-		display: none;
-	}
+select::-ms-expand {
+	display: none;
 }
+
 .select-style {
 	background: #fff;
 	display: inline-block;
@@ -432,8 +431,7 @@ input[type=date]::-webkit-calendar-picker-indicator:before {
 		th, td {
 			text-align: center;
 			height: $base-line-height * 2;
-			padding-top: 5px;
-			padding-bottom: 5px;
+			padding: 5px 10px;
 		}
 		thead {
 			tr {
@@ -450,10 +448,9 @@ input[type=date]::-webkit-calendar-picker-indicator:before {
 		tbody {
 			tr {
 				border-top: none;
-				th {
-					font-size: inherit;
-					padding-left: 6px;
-					padding-right: 6px;
+				border-bottom: 1px solid #c5c5c5;
+				&:last-child {
+					border-bottom: 1px solid #c5c5c5;
 				}
 				td {
 					display: table-cell;
@@ -461,15 +458,119 @@ input[type=date]::-webkit-calendar-picker-indicator:before {
 					font-size: inherit;
 					text-align: center;
 					line-height: auto;
-					padding-left: 5px;
-					padding-right: 5px;
-					border-bottom: 1px solid #c5c5c5;
+					padding-left: 10px;
 					&:before {
 						display: none;
 					}
-					&:last-child {
-						border-bottom: 1px solid #c5c5c5;
+				}
+			}
+		}
+	}
+}
+.responsive-table {
+	.responsive {
+		th, td {
+			position: relative;
+			overflow: hidden;
+			font-size: 12px;
+			text-align: center;
+			white-space: nowrap;
+			min-width: 60px;
+			height: $base-line-height;
+			padding: 5px 20px;
+		}
+		th:first-child, td:first-child, &.pinned td {
+			display: none;
+		}
+		thead {
+			tr {
+				border-bottom: 1px solid #c5c5c5;
+				th {
+					font-size: 12px;
+					font-weight: bold;
+					color: $font-color-table-th;
+					background: $table-th-bg-color;
+				}
+			}
+		}
+		tbody {
+			tr {
+				border-bottom: 1px solid #c5c5c5;
+				td {
+					text-align: center;
+					padding-left: 10px;
+				}
+			}
+		}
+	}
+	div.table-wrapper {
+		position: relative;
+		margin-bottom: 20px;
+		overflow: hidden;
+		border-top: 1px solid #c5c5c5;
+		border-right: 1px solid #c5c5c5;
+		div.scrollable {
+			margin-left: 20%; // 틀 고정 컬럼 사이즈
+			overflow: scroll;
+			overflow-y: hidden;
+			> .responsive {
+				width: 100%;
+			}
+		}
+		div.pinned {
+			position: absolute;
+			left: 0;
+			top: 0;
+			background: #fff;
+			width: 20%; // 틀 고정 컬럼 사이즈
+			overflow: hidden;
+			overflow-x: scroll;
+			border-left: 1px solid #c5c5c5;
+			border-right: 1px solid #c5c5c5;
+			table {
+				width: 100%;
+				tr {
+					border-bottom: 1px solid #c5c5c5;
+					th, td {
+						font-size: 12px;
+						text-align: center;
+						height: $base-line-height;
+						padding: 5px 10px;
+						white-space: nowrap;
 					}
+				}
+				thead {
+					tr {
+						th {
+							font-weight: bold;
+							color: $font-color-table-th;
+							background: $table-th-bg-color;
+						}
+					}
+				}
+			}
+			td:last-child {
+				border-bottom: 0;
+			}
+		}
+	}
+}
+.responsive-table {
+	@include susy-breakpoint($tablet) {
+		overflow-x: auto;
+		.responsive {
+			width: 960px; // 변화되는 값
+			th, td {
+				font-size: inherit;
+				height: $base-line-height * 2;
+				padding: 5px 10px;
+			}
+			th:first-child, td:first-child, &.pinned td {
+				display: table-cell;
+			}
+			tbody {
+				tr {
+					border-top: none;
 				}
 			}
 		}
