@@ -469,6 +469,9 @@ select::-ms-expand {
 }
 .responsive-table {
 	.responsive {
+		caption {
+			display: none;
+		}
 		th, td {
 			position: relative;
 			overflow: hidden;
@@ -510,7 +513,7 @@ select::-ms-expand {
 		border-top: 1px solid #c5c5c5;
 		border-right: 1px solid #c5c5c5;
 		div.scrollable {
-			margin-left: 20%; // 틀 고정 컬럼 사이즈
+			margin-left: 30%; // 틀 고정 컬럼 사이즈
 			overflow: scroll;
 			overflow-y: hidden;
 			> .responsive {
@@ -522,13 +525,16 @@ select::-ms-expand {
 			left: 0;
 			top: 0;
 			background: #fff;
-			width: 20%; // 틀 고정 컬럼 사이즈
+			width: 30%; // 틀 고정 컬럼 사이즈
 			overflow: hidden;
 			overflow-x: scroll;
 			border-left: 1px solid #c5c5c5;
 			border-right: 1px solid #c5c5c5;
 			table {
 				width: 100%;
+				caption {
+					display: none;
+				}
 				tr {
 					border-bottom: 1px solid #c5c5c5;
 					th, td {
@@ -556,10 +562,24 @@ select::-ms-expand {
 	}
 }
 .responsive-table {
+	@include susy-breakpoint($mobile) {
+		div.table-wrapper {
+			div.scrollable {
+				margin-left: 20%; // 틀 고정 컬럼 사이즈
+			}
+			div.pinned {
+				width: 20%; // 틀 고정 컬럼 사이즈
+			}
+		}
+	}
+}
+.responsive-table {
 	@include susy-breakpoint($tablet) {
 		overflow-x: auto;
 		.responsive {
-			width: 960px; // 변화되는 값
+				min-width: 320px;
+				max-width: 960px;
+				width: 100%;
 			th, td {
 				font-size: inherit;
 				height: $base-line-height * 2;
@@ -811,26 +831,120 @@ select::-ms-expand {
 		}
 	}
 }
-// 한줄 라인 오른쪽 배치 (버튼, 체크박스, 라이오버튼 등)
-.line-left-box-area {
-	float: left;
-	margin-top: 20px;
-	margin-bottom: 10px;
-	> li {
-		float: left;
-		margin-left: 6px;
-		&.select-style {
-			.stb-select-container {
-				width: 150px;
-				font-size: 12px;
+// 아이템 그룹 배치 (버튼, 체크박스, 라이오버튼 등)
+.line-group-set {
+	overflow: hidden;
+	.item-group {
+		> li {
+			float: left;
+			margin-right: 10px;
+			margin-bottom: 10px;
+			@include span(full);
+			&:first-child {
+				margin-top: 10px;
+			}
+			&.select-style:before {
+				top: 8px;
+			}
+			> * {
+				width: 100%;
+				height: 40px;
+				line-height: 40px;
+			}
+			button {
+				font-size: 16px !important;
+			}
+			.search {
+				@extend .btn-default;
+				font-size: 16px;
+				.fa-search {
+					font-size: 18px;
+					vertical-align: baseline;
+					margin-right: 10px;
+				}
 			}
 		}
 	}
 }
-.line-right-box-area {
-	@extend .line-left-box-area;
-	float: right;
+.line-group-set {
+	.item-group {
+		@include susy-breakpoint($tablet) {
+			@include layout(8 8px/68px);
+			> li {
+				@include gallery(4 of 8);
+				&:first-child {
+					margin-top: 0;
+				}
+			}
+		}
+		@include susy-breakpoint($desktop) {
+			@include layout(12 10px/74px);
+			> li {
+				@include gallery(3 of 12)
+			}
+		}
+	}
 }
+
+// 날자 조건 그룹 배치
+.line-group-set {
+	.date-group {
+		@include layout(2 8px/136px);
+		> li {
+			margin-bottom: 10px;
+			&:nth-of-type(2) {
+				text-align: center;
+			}
+			&:nth-of-type(4) {
+				margin-bottom: 0;
+			}
+			> input, > button, > select {
+				height: 40px;
+				line-height: 40px;
+			}
+			> button[class^="date-"] {
+				width: 32%;
+				margin-right: 2%;
+				@extend .btn-cancle;
+				&.selected {
+					@extend .btn-selected;
+				}
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+			input[class$="-day"] {
+				width: 47.5%;
+			}
+			.start-day {
+				float: left;
+			}
+			.end-day {
+				float: right;
+			}
+		}
+	}
+}
+.line-group-set {
+	.date-group {
+		@include susy-breakpoint($tablet) {
+			@include layout(8 8px/68px);
+			> li {
+				button[class^="date-"] {
+					float: left;
+				}
+				&:nth-of-type(1) {
+					@include span(4);
+				}
+				&:nth-of-type(2) {
+					@include span(4);
+					@include last;
+				}
+			}
+		}
+	}
+}
+
 // 별점(★☆) 버튼
 span.star {
 	color: $font-color-purple;

@@ -21,7 +21,44 @@
 	</div>
 	<!-- / 페이지 전환 버튼 End -->
 	<!-- Store Announcement -->
-	<div class="store-announcement-list wrap">
+	<div class="sub-container wrap">
+		<!-- 아이템 그룹 배치 -->
+		<div class="line-group-set">
+			<!-- 날자 단위별 보기 -->
+			<ul class="date-group">
+				<li><button class="date-day selected">Day</button><button class="date-week">Week</button><button class="date-month">Month</button></li><!-- 선택된 날자에 class="selected" 삽입 -->
+				<li><input type="date" class="start-day" required>~<input type="date" class="end-day" required></li>
+			</ul>
+			<!-- / 날자 단위별 보기 End -->
+			<!-- 아이템 라인 그룹 -->
+			<ul class="item-group">
+				<li class="select-style">
+					<select>
+						<option value="">All Store</option>
+						<option value="">Store 1</option>
+						<option value="">Store 2</option>
+						<option value="">Store 3</option>
+						<option value="">Store 4</option>
+					</select>
+				</li>
+				<li class="select-style">
+					<select>
+						<option value="">Status</option>
+						<option value="">Confirm</option>
+						<option value="">Standby</option>
+						<option value="">Cancel</option>
+					</select>
+				</li>
+				<li>
+					<input type="search" aria-label="Detail Search">
+				</li>
+				<li>
+					<button class="search"><i class="fa fa-search"></i>Search</button>
+				</li>
+			</ul>
+			<!-- / 아이템 라인 그룹 End -->
+		</div>
+		<!-- 아이템 그룹 배치 End -->
 		<!-- Table list Group -->
 		<div class="responsive-table">
 			<table class="responsive">

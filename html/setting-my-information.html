@@ -11,9 +11,17 @@
 
 <!-- Contents Area-->
 <main id="container">
-	<!-- Setting -->
-	<div class="setting wrap">
-		<div class="info">
+	<!-- 페이지 전환 버튼 -->
+	<div class="setting-title-bg">
+		<div class="title-btn wrap">
+			<a href="setting-alarm-setting.html">Alarm Setting</a>
+			<a class="selected" href="setting-my-information.html">My Information</a><!-- 선택된 메뉴에 class="selected" 삽입 -->
+		</div>
+	</div>
+	<!-- / 페이지 전환 버튼 End -->
+	<!-- My Information -->
+	<div class="sub-container my-information wrap">
+		<div class="left-box">
 			<h5>Profile</h5>
 			<ul>
 				<li>
@@ -32,23 +40,21 @@
 					<label class="star" for="city">City</label>
 					<input type="text" name="city">
 				</li>
-				<li class="select-style">
+				<li class="state">
 					<label class="star" for="state">State</label>
-					<select name="state">
-						<option value="">-</option>
-						<option value="">State 1</option>
-						<option value="">State 2</option>
-						<option value="">State 3</option>
-						<option value="">State 4</option>
-					</select>
+					<div class="select-style">
+						<select name="state">
+							<option value="">-</option>
+							<option value="">State 1</option>
+							<option value="">State 2</option>
+							<option value="">State 3</option>
+							<option value="">State 4</option>
+						</select>
+					</div>
 				</li>
 				<li>
 					<label for="zip-code">ZIP Code</label>
 					<input type="search" name="zip-code">
-				</li>
-				<li>
-					<label for="home-phone">Home Phone</label>
-					<input type="tel" name="home-phone">
 				</li>
 				<li>
 					<label class="star" for="mobile-phone">Mobile Phone</label>
@@ -62,46 +68,9 @@
 					<label for="e-mail">E-mail</label>
 					<input type="email" name="e-mail">
 				</li>
-				<li>
-					<label for="birthday">Birthday</label>
-					<input type="date" name="birthday" required>
-				</li>
-				<li>
-					<label class="star" for="username">User Name</label>
-					<input type="text" name="username">
-				</li>
 			</ul>
 		</div>
-		<div class="info-box">
-			<h6>E-mail and Text</h6>
-			<div>
-				<span class="checkbox-title">Subscribe th Reminders &amp; Notifications</span>
-				<ul class="checkbox-wrap">
-					<li class="checkbox">
-						<input type="checkbox" id="Mail" class="kalypto">
-						<label class="mail-label" for="Mail">Mail</label>
-					</li>
-					<li class="checkbox">
-						<input type="checkbox" id="Text" class="kalypto">
-						<label class="text-label" for="Text">Text</label>
-					</li>
-				</ul>
-			</div>
-			<div>
-				<span class="checkbox-title">Subscribe th our Newsletter &amp; Promotions</span>
-				<ul class="checkbox-wrap">
-					<li class="checkbox">
-						<input type="checkbox" id="Mail" class="kalypto">
-						<label class="mail-label" for="Mail">Mail</label>
-					</li>
-					<li class="checkbox">
-						<input type="checkbox" id="Text" class="kalypto">
-						<label class="text-label" for="Text">Text</label>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<div class="info-box">
+		<div class="right-box">
 			<h6>Change Password</h6>
 			<ul class="password">
 				<li><label for="">Password</label><input type="password"></li>
@@ -109,12 +78,33 @@
 				<li><label for="">Confirm Password</label><input type="password"></li>
 			</ul>
 		</div>
-		<div class="btn-box wrap">
+		<div class="right-box">
+			<h6>E-mail and Text</h6>
+			<div class="status">
+				<span class="radio-title">A1 Salon</span>
+				<div class="radio-box">
+					<input type="radio"id="Salon-A-on" name="Salon-A" checked><label for="Salon-A-on"><span><i class="fa fa-circle-o"></i></span></label><input type="radio" id="Salon-A-off" name="Salon-A"><label for="Salon-A-off"><span><i class="fa fa-minus"></i></span></label>
+				</div>
+			</div>
+			<div class="status">
+				<span class="radio-title">B Salon</span>
+				<div class="radio-box">
+					<input type="radio"id="Salon-B-on" name="Salon-B" checked><label for="Salon-B-on"><span><i class="fa fa-circle-o"></i></span></label><input type="radio" id="Salon-B-off" name="Salon-B"><label for="Salon-B-off"><span><i class="fa fa-minus"></i></span></label>
+				</div>
+			</div>
+			<div class="status">
+				<span class="radio-title">C Salon</span>
+				<div class="radio-box">
+					<input type="radio"id="Salon-C-on" name="Salon-C" checked><label for="Salon-C-on"><span><i class="fa fa-circle-o"></i></span></label><input type="radio" id="Salon-C-off" name="Salon-C"><label for="Salon-C-off"><span><i class="fa fa-minus"></i></span></label>
+				</div>
+			</div>
+		</div>
+		<div class="btn-box">
 			<button class="btn-save">Save</button>
 			<button class="btn-clear">Clear</button>
 		</div>
 	</div>
-	<!-- / Setting End -->
+	<!-- / My Information End -->
 </main>
 <!-- / Contents Area End-->
 

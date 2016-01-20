@@ -81,10 +81,10 @@
 	$('.trigger-pop-subject').popupLayer();
 	$('.trigger-pop-request-time-off').popupLayer();
 	// 위치 이동 드래그 될 팝업창
-	$('.popup-layer .container').draggable({
-		//지정된 영역안에서만 이동
-		containment: "#container"
-	});
+	// $('.popup-layer .container').draggable({
+	// 	//지정된 영역안에서만 이동
+	// 	containment: "#container"
+	// });
 
 	// Store & Designer 검색 input 요소 편집할 수 없게 설정
 	$( '[class$="-search-set"] li input.language' ).attr('readonly', true);

@@ -25,7 +25,6 @@
 		<!-- 스케줄 관리 설정 -->
 		<div class="line-group-set">
 			<ul class="line-group-01">
-				<li><button class="btn-synck"><i class="fa fa-refresh"></i>Synck</button></li>
 				<li><a href="/" class="btn-add trigger-pop-add-schedule" data-target=".popup-layer.pop-add-schedule"><i class="fa fa-plus"></i>Add</a></li>
 				<li class="select-style">
 					<select>
@@ -41,58 +40,60 @@
 		<!-- / 스케줄 관리 설정 End -->
 		<p class="total">Total : 25 </p>
 		<!-- Table list Group -->
-		<table class="table-set">
-			<caption>Schedule : My Schedule</caption>
-			<colgroup>
-				<col>
-				<col>
-				<col>
-			</colgroup>
-			<thead>
-				<tr>
-					<th>Date/Time</th>
-					<th>Store/ Service</th>
-					<th>Customer</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>MON</td>
-					<td><p class="bg-green">A Salon</p></td>
-					<td><i class="fa fa-clock-o"></i>9:00 AM ~ 2:30 PM</td>
-				</tr>
-				<tr>
-					<td>TUE</td>
-					<td><p class="bg-yellow">Suite Styles Salon</p></td>
-					<td><i class="fa fa-clock-o"></i>9:00 AM ~ 2:30 PM</td>
-				</tr>
-				<tr>
-					<td>WED</td>
-					<td><p class="bg-green">A Salon</p></td>
-					<td><i class="fa fa-clock-o"></i>9:00 AM ~ 2:30 PM</td>
-				</tr>
-				<tr>
-					<td>THU</td>
-					<td><p class="bg-yellow">Suite Styles Salon</p></td>
-					<td><i class="fa fa-clock-o"></i>9:00 AM ~ 2:30 PM</td>
-				</tr>
-				<tr>
-					<td>FRI</td>
-					<td><p class="bg-yellow">Suite Styles Salon</p></td>
-					<td><i class="fa fa-clock-o"></i>9:00 AM ~ 2:30 PM</td>
-				</tr>
-				<tr>
-					<td>SAT</td>
-					<td><p class="bg-pink">B Salon</p></td>
-					<td><i class="fa fa-clock-o"></i>9:00 AM ~ 2:30 PM</td>
-				</tr>
-				<tr>
-					<td>SUN</td>
-					<td><p class="bg-pink">B Salon</p></td>
-					<td><i class="fa fa-clock-o"></i>9:00 AM ~ 2:30 PM</td>
-				</tr>
-			</tbody>
-		</table>
+		<div class="responsive-table">
+			<table class="responsive">
+				<caption>Schedule : My Schedule</caption>
+				<colgroup>
+					<col>
+					<col>
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th>Date</th>
+						<th>Store</th>
+						<th>Time</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>MON</td>
+						<td><p class="bg-color-01">A Salon</p></td>
+						<td><i class="fa fa-clock-o"></i>9:00 AM ~ 2:30 PM</td>
+					</tr>
+					<tr>
+						<td>TUE</td>
+						<td><p class="bg-color-02">Suite Styles Salon</p></td>
+						<td><i class="fa fa-clock-o"></i>9:00 AM ~ 2:30 PM</td>
+					</tr>
+					<tr>
+						<td>WED</td>
+						<td><p class="bg-color-01">A Salon</p></td>
+						<td><i class="fa fa-clock-o"></i>9:00 AM ~ 2:30 PM</td>
+					</tr>
+					<tr>
+						<td>THU</td>
+						<td><p class="bg-color-02">Suite Styles Salon</p></td>
+						<td><i class="fa fa-clock-o"></i>9:00 AM ~ 2:30 PM</td>
+					</tr>
+					<tr>
+						<td>FRI</td>
+						<td><p class="bg-color-02">Suite Styles Salon</p></td>
+						<td><i class="fa fa-clock-o"></i>9:00 AM ~ 2:30 PM</td>
+					</tr>
+					<tr>
+						<td>SAT</td>
+						<td><p class="bg-color-03">B Salon</p></td>
+						<td><i class="fa fa-clock-o"></i>9:00 AM ~ 2:30 PM</td>
+					</tr>
+					<tr>
+						<td>SUN</td>
+						<td><p class="bg-color-03">B Salon</p></td>
+						<td><i class="fa fa-clock-o"></i>9:00 AM ~ 2:30 PM</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 		<!-- / Table list Group End -->
 	</div>
 	<!-- / Schedule : My Schedule End -->
