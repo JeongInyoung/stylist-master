@@ -80,6 +80,7 @@
 	$('.trigger-pop-add-schedule').popupLayer();
 	$('.trigger-pop-subject').popupLayer();
 	$('.trigger-pop-request-time-off').popupLayer();
+	$('.trigger-pop-login').popupLayer();
 	// 위치 이동 드래그 될 팝업창
 	// $('.popup-layer .container').draggable({
 	// 	//지정된 영역안에서만 이동
